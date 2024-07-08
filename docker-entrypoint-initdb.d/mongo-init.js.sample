@@ -1,0 +1,8 @@
+// Filename: mongo-init.js.sample
+db = db.getSiblingDB("hackathon-team-former");
+db.createUser({
+  user: "", // Add username here
+  pwd: "", // Add password here
+  roles: [{ role: "readWrite", db: "hackathon-team-former" }],
+});
+db.createCollection("users");
